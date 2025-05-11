@@ -14,10 +14,9 @@ with open(ruta_pdf, 'rb') as archivo:
     for pagina in lector.pages:
         texto += pagina.extract_text()
 
-# Leer el texto en voz alta
-motor.say(texto)
-motor.runAndWait()
 
 # Guardar el archivo de audio
-# motor.save_to_file(texto, 'salida_audio.mp3')
-# motor.runAndWait()
+motor.save_to_file(texto, 'salida_audio.mp3')
+motor.runAndWait()
+
+
